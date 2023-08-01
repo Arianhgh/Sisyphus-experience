@@ -172,6 +172,7 @@ function App() {
       <div className='wrapper'>
         <div className='text'>
           <h3>Press the spacebar to make the ball jump</h3>
+          <a href="https://github.com/arianhgh" target="_blank" rel="noopener noreferrer">Arianhgh</a>
           {renderScript()}
         </div>
         <div className='scene' ref={scene} />
