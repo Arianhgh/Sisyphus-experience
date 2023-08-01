@@ -42,8 +42,8 @@ h3{
 
 /* Style the text inside the overlay */
 .script-overlay p {
-  font-size: 24px; /* Increase font size to make it bigger */
-  line-height: 1.6; /* Adjust line-height for better readability */
+  font-size: 22px; /* Increase font size to make it bigger */
+  line-height: 1.2; /* Adjust line-height for better readability */
   text-align: center;
 }
 

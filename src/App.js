@@ -121,7 +121,7 @@ function App() {
           <motion.div
             className='script-overlay'
             initial={{ opacity: 0, x: -400, y: -350 }}
-            animate={{ opacity: 1, x: -270, y: -350 }}
+            animate={{ opacity: 1, x: -270, y: -300 }}
             exit={{ opacity: 0, x: -400, y: -350 }} // Add the exit transition for fade-out
             transition={{ duration: 0.5 }}
             key={currentScriptIndex} // Add a unique key for smoother transitions
@@ -135,7 +135,7 @@ function App() {
         <motion.div
           className='script-overlay'
           initial={{ opacity: 0, x: -400, y: -350 }}
-          animate={{ opacity: 1, x: -270, y: -350 }}
+          animate={{ opacity: 1, x: -270, y: -300 }}
           exit={{ opacity: 0, x: -400, y: -350 }} // Add the exit transition for fade-out
           transition={{ duration: 1 }}
           key={-1} // Add a unique key for smoother transitions
