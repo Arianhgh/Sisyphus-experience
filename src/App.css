@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(51deg, rgb(201, 201, 201) 79%, rgba(218, 218, 218, 0.8) 98%);
 }
 
-.App-link {
-  color: #61dafb;
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 80px;
+
 }
+
+
+.script-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  color : black;
+  z-index: 999;
+  font-family: 'Comic Sans MS', cursive; /* Use a funny font, you can replace 'Comic Sans MS' with your desired funny font */
+}
+
+/* Style the text inside the overlay */
+.script-overlay p {
+  font-size: 24px; /* Increase font size to make it bigger */
+  line-height: 1.6; /* Adjust line-height for better readability */
+  text-align: center;
+}
+
