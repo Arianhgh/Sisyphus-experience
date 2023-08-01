@@ -10,10 +10,10 @@ function App() {
   const engine = useRef();
   const ball = useRef();
   const ramp = useRef();
-  const [movespeed, setMovespeed] = useState(0.22);
+  const [movespeed, setMovespeed] = useState(0.19);
   const [showScript, setShowScript] = useState(false)
   const [currentScriptIndex, setCurrentScriptIndex] = useState(-1);
-  const [currentspeed, setCurrentspeed] = useState(0.22);
+  const [currentspeed, setCurrentspeed] = useState(0.19);
   const [isSpaceBarPressed, setIsSpaceBarPressed] = useState(false);
   const [hasReachedPosition, setHasReachedPosition] = useState(false);
   
@@ -90,7 +90,7 @@ function App() {
   };
 
   const handleKeyDown = (e) => {
-    const decreaseamount = 0.001;
+    const decreaseamount = 0.005;
     if (!hasReachedPosition && e.keyCode === 32 && !isSpaceBarPressed) {
       // Apply upward force on the ball when the spacebar is pressed for the first time
       setIsSpaceBarPressed(true); // Set the state to true when the space bar is pressed
