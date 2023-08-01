@@ -120,9 +120,9 @@ function App() {
       return (
           <motion.div
             className='script-overlay'
-            initial={{ opacity: 0, x: -400, y: -350 }}
-            animate={{ opacity: 1, x: -270, y: -300 }}
-            exit={{ opacity: 0, x: -400, y: -350 }} // Add the exit transition for fade-out
+            initial={{ opacity: 0, x: 0, y: -30 }}
+          animate={{ opacity: 1, x: -200, y: -30 }}
+          exit={{ opacity: 0, x: 0, y: -30 }}  // Add the exit transition for fade-out
             transition={{ duration: 0.5 }}
             key={currentScriptIndex} // Add a unique key for smoother transitions
           >
@@ -134,9 +134,9 @@ function App() {
       <AnimatePresence>
         <motion.div
           className='script-overlay'
-          initial={{ opacity: 0, x: -400, y: -350 }}
-          animate={{ opacity: 1, x: -270, y: -300 }}
-          exit={{ opacity: 0, x: -400, y: -350 }} // Add the exit transition for fade-out
+          initial={{ opacity: 0, x: 0, y: -30 }}
+          animate={{ opacity: 1, x: -200, y: -30 }}
+          exit={{ opacity: 0, x: 0, y: -30 }} // Add the exit transition for fade-out
           transition={{ duration: 1 }}
           key={-1} // Add a unique key for smoother transitions
         >
@@ -145,17 +145,18 @@ function App() {
       </AnimatePresence>
     );
   };
-  const scripts = ["Congrats! You reached the top! But remember, it only goes down from here. Just like that exam you aced!",
+  const scripts = [
+  "Well, well, well, look who's managed to defy the odds and reach the summit! Bravo! But you know, it won't last. Just like that fleeting sense of achievement after acing an exam or landing a big deal at work, it's all downhill from here! Enjoy the moment while it lasts.",
+  "It's like watching someone passionately pursuing their dreams only to face reality crashing down upon them. Life's just like that, isn't it? Ups and downs, but mostly downs.",
+  "Oh, look at you, pushing that ball like your life depends on it! It's almost adorable how you keep going, knowing deep down it's a lost cause.",
   "Look who's back! Pushing uphill, huh? The only thing getting higher is your frustration!",
+  "They say doing the same thing and expecting different results is madness. But I say it's just you!",
   "Impressive! But you know, persistence doesn't pay the bills. Keep climbing!",
   "You're getting better at this! But the ball's getting heavier. Just like your workload!",
-  "And the ball rolls back down! Can't help but laugh at the irony! ",
-  "You've got perseverance, I'll give you that. The ball's got gravity, though!",
-  "Pushing, pushing, pushing... Maybe one day it'll stay up! Probably not.",
-  "I bet you're getting tired. But hey, the ball isn't!",
-  "They say doing the same thing and expecting different results is madness. But I say it's just you!",
   "Look at you go! A true modern-day Sisyphus, pushing that boulder of a ball!",
   "Is there an award for 'Most Persistent Sisyphus'? Because you'd be a strong contender!",
+  "Pushing, pushing, pushing... Maybe one day it'll stay up! Probably not.",
+  "I bet you're getting tired. But hey, the ball isn't!",
   "The boulder's getting heavier, but your determination's still impressive.",
   "You must love the uphill struggle. Just like the struggle of paying off those student loans!",
   "Can't blame you for trying. Even if the ball's got other plans.",
@@ -164,13 +165,18 @@ function App() {
 
   return (
     <div className='app'
-      style={{ width: '100vw', height: '95vh' }}
+      style={{ width: '100vw', height: '100vh' }}
       onKeyDown={handleKeyDown}
       tabIndex="0"
     >
-      <h3>Press the spacebar to make the ball jump</h3>
-      {renderScript()}
-      <div className='scene' ref={scene} />
+      <div className='wrapper'>
+        <div className='text'>
+          <h3>Press the spacebar to make the ball jump</h3>
+          {renderScript()}
+        </div>
+        <div className='scene' ref={scene} />
+      </div>
+      
     </div>
   );
 }
